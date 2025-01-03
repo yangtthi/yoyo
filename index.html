@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFD7D7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #FF9999;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            color: white;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>生日快乐！</h1>
+</header>
+<main>
+    <p>愿你度过一个美好的生日，愿你的每一天都充满欢笑和幸福。</p>
+    <img src="..\resources\img\b1.png" alt="生日蛋糕">
+</main>
+<footer>
+    祝好！<br>
+    XXX 敬上
+</footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
+    var myCanvas = document.createElement('canvas');
+    document.body.appendChild(myCanvas);
+
+    var myConfetti = confetti.create(myCanvas, {
+        resize: true,
+        useWorker: true
+    });
+    myConfetti({
+        particleCount: 100,
+        spread: 160
+        // any other options from the global
+        // confetti function
+    });
+
+</script>
+
+</html>
