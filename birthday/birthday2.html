@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>生日祝福</title>
+    <style>
+        body {
+            margin: 0;
+            background: url('balloons.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .slideshow-container {
+            position: relative;
+            margin: 50px auto;
+            width: 800px;
+            height: 600px;
+            overflow: hidden;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+        }
+        .audio-container {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .fireworks {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="..\resources\img\b1.png" alt="生日图片1">
+    </div>
+    <div class="mySlides">
+        <img src="..\resources\img\b1.png" alt="生日图片2">
+    </div>
+    <div class="mySlides">
+        <img src="..\resources\img\b1.png" alt="生日图片3">
+    </div>
+</div>
+
+<div class="audio-container">
+    <audio autoplay loop>
+        <source src="happybirthday.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<div class="fireworks">
+    <img src="..\resources\img\b1.png" alt="烟花效果">
+</div>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("mySlides");
+    showSlides();
+
+    function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // 每2秒切换一次
+    }
+</script>
+
+</body>
+</html>
