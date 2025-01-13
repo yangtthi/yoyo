@@ -67,7 +67,7 @@
             object-fit: cover;
             z-index: 0;
             opacity: 0.8;
-            visibility: hidden; /* 初始隐藏视频 */
+            /*visibility: hidden; !* 初始隐藏视频 *!*/
         }
     </style>
 </head>
@@ -79,7 +79,8 @@
 </div>
 
 <!-- 视频背景 -->
-<video id="birthdayVideo" muted loop>
+<!--<video id="birthdayVideo" muted loop>-->
+<video autoplay muted loop>
     <source src="..\resources\video\0e3f714ae970d95e5a3fdbabcc9c62a5.mp4" type="video/mp4">
 </video>
 
@@ -94,13 +95,13 @@
 <div class="confetti" style="left: 80%; animation-delay: 1.8s;"></div>
 <div class="confetti" style="left: 90%; animation-delay: 0.3s;"></div>
 
-<script>
-    // 延迟3秒播放视频
-    setTimeout(function() {
-        var video = document.getElementById('birthdayVideo');
-        video.style.visibility = 'visible'; // 显示视频
-        video.play();
-    }, 3000); // 3000毫秒 = 3秒
-</script>
+<!--<script>-->
+<!--    // 延迟3秒播放视频-->
+<!--    setTimeout(function() {-->
+<!--        var video = document.getElementById('birthdayVideo');-->
+<!--        video.style.visibility = 'visible'; // 显示视频-->
+<!--        video.play();-->
+<!--    }, 3000); // 3000毫秒 = 3秒-->
+<!--</script>-->
 </body>
 </html>
