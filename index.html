@@ -57,13 +57,31 @@
                 transform: translateY(100vh) rotate(360deg);
             }
         }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.8;
+            visibility: hidden; /* 初始隐藏视频 */
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>🎉 YOYO 生日快乐！ 🎉</h1>
-    <p>愿你每天都开心快乐！</p>
+    <h1>🎉 YOYO 🎉</h1>
+    <h1>🎉  生日快乐  🎉</h1>
+<!--    <p> 愿你每天都开心快乐  </p>-->
 </div>
+
+<!-- 视频背景 -->
+<video id="birthdayVideo" muted loop>
+    <source src="..\resources\video\0e3f714ae970d95e5a3fdbabcc9c62a5.mp4" type="video/mp4">
+</video>
 
 <!-- 添加一些彩带效果 -->
 <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
@@ -75,5 +93,14 @@
 <div class="confetti" style="left: 70%; animation-delay: 0.8s;"></div>
 <div class="confetti" style="left: 80%; animation-delay: 1.8s;"></div>
 <div class="confetti" style="left: 90%; animation-delay: 0.3s;"></div>
+
+<script>
+    // 延迟3秒播放视频
+    setTimeout(function() {
+        var video = document.getElementById('birthdayVideo');
+        video.style.visibility = 'visible'; // 显示视频
+        video.play();
+    }, 3000); // 3000毫秒 = 3秒
+</script>
 </body>
 </html>
